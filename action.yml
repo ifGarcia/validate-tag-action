@@ -1,0 +1,12 @@
+name: Validate Tag Action
+description: Validate if a new tag is created, otherwise use the run number.
+inputs:
+  run_number:
+    description: 'GitHub run number'
+    required: true
+outputs:
+  tag_name:
+    description: 'The tag name or run number'
+runs:
+  using: 'node12'
+  main: 'index.js'
